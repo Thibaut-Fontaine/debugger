@@ -6,7 +6,7 @@
 /*   By: tfontain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/21 17:30:28 by tfontain          #+#    #+#             */
-/*   Updated: 2017/01/22 16:26:40 by tfontain         ###   ########.fr       */
+/*   Updated: 2017/01/22 16:37:44 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,24 +17,7 @@
 #include <stdio.h>
 
 #define LINE_COUNTER "\nprintf(\"%d\\n\", "
-#define LINEHEAD "\n#include <stdio.h>\nint cccounter__ = 1;\n"
-
-static char		*realloc_str(char *str, size_t size)
-{
-	char		*r;
-
-	if (str != NULL)
-	{
-		if ((r = malloc(size + 1)) == NULL)
-			return (NULL);
-		strncpy(r, str, size);
-		r[size] = 0;
-		free(str);
-	}
-	else
-		r = NULL;
-	return (r);
-}
+#define LINEHEAD "\n#include <stdio.h>\n"
 
 void		write_in(const int fd, char *s, size_t k)
 {
