@@ -15,3 +15,7 @@
 
 # a la racine d'un projet git, permet de connaitre l'adresse du repo
 git config --get remote.origin.url
+
+# reset un repo a partir du repo deja pushé
+# (equivalent d'un git clone mais en gardant le meme dossier)
+git reset --hard HEAD
