@@ -19,3 +19,6 @@ git config --get remote.origin.url
 # reset un repo a partir du repo deja pushé
 # (equivalent d'un git clone mais en gardant le meme dossier)
 git reset --hard HEAD
+
+# affiche les fichiers contenant des erreurs de norme, et leurs erreurs
+norminette | grep -i -B 1 "Error"
