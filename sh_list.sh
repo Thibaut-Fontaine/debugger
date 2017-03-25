@@ -22,3 +22,6 @@ git reset --hard HEAD
 
 # affiche les fichiers contenant des erreurs de norme, et leurs erreurs
 norminette | grep -i -B 1 "Error"
+
+#checker un repo git
+clear && echo -n 'folder ' && pwd && echo -n 'at git adress ' && git config --get remote.origin.url && echo -n 'these files are in : ' && ls && git status
