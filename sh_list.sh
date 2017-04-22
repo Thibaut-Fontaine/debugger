@@ -25,3 +25,6 @@ norminette | grep -i -B 1 "Error"
 
 #checker un repo git
 clear && echo -n 'folder ' && pwd && echo -n 'at git adress ' && git config --get remote.origin.url && echo -n 'these files are in : ' && ls && git status
+
+#kill Itunes :
+ps axww | grep -v grep | grep -i itunes | awk '{print $1}' | xargs kill -9
