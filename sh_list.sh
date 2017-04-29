@@ -28,3 +28,6 @@ clear && echo -n 'folder ' && pwd && echo -n 'at git adress ' && git config --ge
 
 #kill Itunes :
 ps axww | grep -v grep | grep -i itunes | awk '{print $1}' | xargs kill -9
+
+# remplace l'url du repo par un autre
+git remote set-url origin <url>
