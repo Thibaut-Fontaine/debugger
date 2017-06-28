@@ -31,3 +31,6 @@ ps axww | grep -v grep | grep -i itunes | awk '{print $1}' | xargs kill -9
 
 # remplace l'url du repo par un autre
 git remote set-url origin <url>
+
+# instaure un alias pour restaurer un fichier supprimé (en utilisant "git restore <file>")
+git config alias.restore '!f() { git checkout $(git rev-list -n 1 HEAD -- $1)~1 -- $(git diff --name-status $(git rev-list -n 1 HEAD -- $1)~1 | grep '^D' | cut -f 2); }; f'
